@@ -6,3 +6,6 @@ mkdir /home/_default/dolibarr/htdocs/custom
 cd /home/_default/dolibarr/htdocs/custom
 
 ln -s /home/_default /var/www/_default
+
+
+mkdir /home/client
