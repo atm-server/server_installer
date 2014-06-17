@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+	ServerAdmin support@atm-consulting.fr
+
+	ServerName dolibarr_defaut.srv4.atm-consulting.fr
+
+	DocumentRoot /var/www/client/dolibarr_defaut/dolibarr/htdocs/
+	<Directory /var/www/client/dolibarr_defaut/dolibarr/htdocs>
+		Options -Indexes FollowSymLinks MultiViews
+		AllowOverride All
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/dolibarr_defaut-error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/dolibarr_defaut-access.log combined
+</VirtualHost>
