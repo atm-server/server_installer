@@ -5,6 +5,10 @@ cd /home/_default/dolibarr/ & git checkout 3.5
 mkdir /home/_default/dolibarr/htdocs/custom
 cd /home/_default/dolibarr/htdocs/custom
 
+git clone git@atmsrv1:doli-titre subtotal
+git clone git@atmsrv1:doli-docpreview docpreview
+git clone git@atmsrv1:doli-abricot abricot
+
 ln -s /home/_default /var/www/_default
 
 
