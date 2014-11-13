@@ -1,0 +1,11 @@
+AuthType Basic
+AuthName "Please Log In"
+AuthUserFile /var/www/client/.htpasswd
+Require valid-user
+
+
+Order Deny,Allow
+Deny from all
+Allow from 127.0.0.1
+Satisfy Any
+

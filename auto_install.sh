@@ -2,8 +2,8 @@
 # $1 => nom du répertoire client
 #################################
 
-if [ ! $# == 1 ]; then
-	echo "Il faut 1 paramètre pour le nom de l'installation"
+if [ ! $# == 3 ]; then
+	echo "Il faut 3 paramètres pour le nom de l'installation, le mot de passe root mysql et le mot de passe sql futur  (min 20 car. http://www.generateurdemotdepasse.com/)"
 	exit 0;
 fi
 
@@ -16,13 +16,26 @@ sh pull_all.sh /home/_default/dolibarr/htdocs/custom
 ####################################
 # Copie du dolibarr et configuration
 ####################################
-cp -r /home/_default /var/www/client/$1
+mkdir /home/client/$1
+cp -r /home/_default/* /var/www/client/$1/
 cd /var/www/client/$1/dolibarr
-mkdir documents
-chmod 777 documents
-touch htdocs/conf/conf.php
-chmod 777 htdocs/conf/conf.php
+
+sed -i -e "s/url_site/$1/g" /home/client/$1/dolibarr/htdocs/conf/conf.php
+sed -i -e "s/root_site/$1/g" /home/client/$1/dolibarr/htdocs/conf/conf.php
+sed -i -e "s/defaut_dolibarr/$1_dolibarr/g" /home/client/$1/dolibarr/htdocs/conf/conf.php
+sed -i -e "s/mysql_password/$3/g" /home/client/$1/dolibarr/htdocs/conf/conf.php
+sed -i -e "s/mysql_user/$1/g" /home/client/$1/dolibarr/htdocs/conf/conf.php
+
 echo "Copie du dolibarr et configuration : OK"
+
+echo "CREATE DATABASE $1_dolibarr" | mysql -u root -p"$2"
+echo "CREATE USER '$1'@'localhost' IDENTIFIED BY '$3'" | mysql -u root -p"$2" $1_dolibarr
+echo "GRANT ALL PRIVILEGES ON $1_dolibarr . * TO '$1'@'localhost'" | mysql -u root -p"$2" $1_dolibarr
+
+cat /var/www/defaut_dolibarr.sql | mysql -u root -p"$2" $1_dolibarr
+
+
+echo "Copie base par défaut OK"
 
 ###############################################
 # Création et initialisation du fichier apache2
@@ -34,13 +47,6 @@ a2ensite $1
 apache2ctl restart
 echo "Création et initialisation du fichier apache2 : OK"
 
-##########################################################
-# Mise en pause du script pour installation via navigateur
-##########################################################
-echo "Installation par navigateur maintenant nécessaire, appuyez sur une touche pour lancer la suite du script"
-read touche
-echo "Reprise du script"
-
 echo "Configuration de la sécurité HTTPauth (mot de passe de 4 caractè sur http://www.generateurdemotdepasse.com/ "
 htpasswd /var/www/client/.htpasswd $1
 
@@ -51,20 +57,5 @@ cd /var/www/client/$1/dolibarr
 touch documents/install.lock
 chmod 755 /var/www/client/$1/dolibarr/htdocs/conf/conf.php
 echo "Création conf.php et install.lock : OK"
-
-###################################################################
-# Activation du répertoire custom et création des liens symboliques
-###################################################################
-cd /var/www/client/$1/dolibarr/htdocs/conf/
-sed -i -e 's/\/\/$dolibarr_main_url_root_alt/$dolibarr_main_url_root_alt/g' conf.php
-sed -i -e 's/\/\/$dolibarr_main_document_root_alt/$dolibarr_main_document_root_alt/g' conf.php
-cd ../
-#mkdir custom
-cd custom
-ln -s /var/www/client/$1/doli-report report
-#ln -s /var/www/client/$1/doli-export-compta export-compta
-#ln -s /var/www/client/$1/doli-caisse caisse
-echo "Activation répertoire custom + liens symboliques : OK"
-
 
 exit 0
