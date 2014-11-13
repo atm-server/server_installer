@@ -17,7 +17,7 @@ sh pull_all.sh /home/_default/dolibarr/htdocs/custom
 # Copie du dolibarr et configuration
 ####################################
 mkdir /home/client/$1
-cp -r /home/_default/* /var/www/client/$1/
+cp -rp /home/_default/* /var/www/client/$1/
 cd /var/www/client/$1/dolibarr
 
 sed -i -e "s/url_site/$1/g" /home/client/$1/dolibarr/htdocs/conf/conf.php
