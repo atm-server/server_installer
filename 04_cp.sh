@@ -7,6 +7,7 @@ cp pull_all.sh /home/_default/
 cp auto_install.sh /var/www/
 cp dolibarr_defaut /etc/apache2/sites-available
 cp .htaccess /home/_default/
+cp .htaccess /home/client/
 
 #write out current crontab
 crontab -l > mycron
