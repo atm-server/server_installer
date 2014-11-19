@@ -1,7 +1,7 @@
 mkdir /home/_default
 mkdir /home/client
 
-touch /var/www/client/.htpasswd
+touch /home/client/.htpasswd
 
 cd /home/_default
 git clone git@github.com:ATM-Consulting/dolibarr.git
