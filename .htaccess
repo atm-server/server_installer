@@ -1,3 +1,10 @@
+<Files ~ "\.(sh|sql|bz2|gz)$">
+  order allow,deny
+  deny from all
+</Files>
+
+Options All -Indexes
+
 AuthType Basic
 AuthName "Please Log In"
 AuthUserFile /var/www/client/.htpasswd
@@ -9,8 +16,4 @@ Deny from all
 Allow from 127.0.0.1
 Satisfy Any
 
-<Files ~ "\.(sh|sql|bz2)$">
-  order allow,deny
-  deny from all
-</Files>
 
