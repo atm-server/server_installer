@@ -2,7 +2,7 @@ cd ~/server_installer
 
 cp auto_install.sh /var/www/
 cp dump-all.sh /root/
-cp pull_all.sh /home/_default/dolibarr/htdocs/custom/
+cp pull_all.sh /home/_default/dynamicrh/htdocs/custom/
 cp pull_all.sh /home/_default/
 cp auto_install.sh /var/www/
 cp dolibarr_defaut /etc/apache2/sites-available

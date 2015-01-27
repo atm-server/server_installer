@@ -4,19 +4,14 @@ mkdir /home/client
 touch /home/client/.htpasswd
 
 cd /home/_default
-git clone git@github.com:ATM-Consulting/dolibarr.git
+git clone git@atmsrv1:rh.git dynamicrh
 
-cd /home/_default/dolibarr/ 
-git checkout 3.6
+cd /home/_default/dynamicrh/ 
+git checkout 3.5
 git pull
+git submodule init
+git submodule update
+git submodule foreach git pull
 
-mkdir /home/_default/dolibarr/htdocs/custom
-cd /home/_default/dolibarr/htdocs/custom
-
-git clone git@atmsrv1:doli-titre subtotal
-git clone git@atmsrv1:doli-docpreview docpreview
-git clone git@atmsrv1:doli-abricot abricot
-git clone git@atmsrv1:doli-report report
-git clone git@atmsrv1:doli-breadcrumb breadcrumb
 
 

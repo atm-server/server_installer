@@ -1,10 +1,10 @@
 <VirtualHost *:80>
 	ServerAdmin support@atm-consulting.fr
 
-	ServerName dolibarr_defaut.srv5.atm-consulting.fr
+	ServerName dolibarr_defaut.mondynamicrh.fr
 
-	DocumentRoot /var/www/client/dolibarr_defaut/dolibarr/htdocs/
-	<Directory /var/www/client/dolibarr_defaut/dolibarr/htdocs>
+	DocumentRoot /var/www/client/dolibarr_defaut/dynamicrh/htdocs/
+	<Directory /var/www/client/dolibarr_defaut/dynamicrh/htdocs>
 		Options -Indexes FollowSymLinks MultiViews
 		AllowOverride All
 	</Directory>
