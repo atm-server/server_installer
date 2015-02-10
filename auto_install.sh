@@ -10,8 +10,10 @@ fi
 #####################################################################################
 # MAJ du dolibarr defaut, des modules ATM génériquet des modules externes de custom
 #####################################################################################
-sh pull_all.sh /home/_default
-sh pull_all.sh /home/_default/dolibarr/htdocs/custom
+cd /home/_default
+sh pull_all.sh
+cd /home/_default/dolibarr/htdocs/custom
+sh pull_all.sh
 
 ####################################
 # Copie du dolibarr et configuration
