@@ -10,6 +10,9 @@ cd /home/_default/dolibarr/
 git checkout 3.6
 git pull
 
+mkdir /home/_default/dolibarr/documents
+chmod 777 /home/_default/dolibarr/documents
+
 mkdir /home/_default/dolibarr/htdocs/custom
 cd /home/_default/dolibarr/htdocs/custom
 
