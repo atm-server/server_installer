@@ -30,11 +30,11 @@ sed -i -e "s/mysql_user/$1/g" /home/client/$1/dolibarr/htdocs/conf/conf.php
 
 echo "Copie du dolibarr et configuration : OK"
 
-echo "CREATE DATABASE $1_dolibarr" | mysql -u root -p"$2"
-echo "CREATE USER '$1'@'localhost' IDENTIFIED BY '$3'" | mysql -u root -p"$2" $1_dolibarr
-echo "GRANT ALL PRIVILEGES ON $1_dolibarr . * TO '$1'@'localhost'" | mysql -u root -p"$2" $1_dolibarr
+echo "CREATE DATABASE $1_dolibarr" | mysql -u root -p'$2'
+echo "CREATE USER '$1'@'localhost' IDENTIFIED BY '$3'" | mysql -u root -p'$2' $1_dolibarr
+echo "GRANT ALL PRIVILEGES ON $1_dolibarr . * TO '$1'@'localhost'" | mysql -u root -p'$2' $1_dolibarr
 
-cat /var/www/defaut_dolibarr.sql | mysql -u root -p"$2" $1_dolibarr
+cat /var/www/defaut_dolibarr.sql | mysql -u root -p'$2' $1_dolibarr
 
 
 echo "Copie base par défaut OK"
