@@ -21,5 +21,7 @@ git clone git@atmsrv1:doli-docpreview docpreview
 git clone git@atmsrv1:doli-abricot abricot
 git clone git@atmsrv1:doli-report report
 git clone git@atmsrv1:doli-breadcrumb breadcrumb
-
-
+git clone git@github.com:ATM-Consulting/dolibarr_module_multidevise.git multidevise
+git clone git@github.com:ATM-Consulting/module_dolibarr_tarif.git tarif
+git clone git@github.com:ATM-Consulting/dolibarr_module_timesheet.git timesheet
+git clone git@atmsrv1:store-selectbank.git selectbank
