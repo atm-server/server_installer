@@ -2,11 +2,6 @@
 # $1 => nom du serveur
 #################################
 
-if [ ! $# == 1 ]; then
-	echo "Il faut 1 paramètres pour le nom du serveur en cours d'installation (ex : srv1)"
-	exit 0;
-fi
-
 cd ~/server_installer
 
 cp auto_install.sh /var/www/
@@ -19,7 +14,6 @@ cp .htaccess /home/client/
 
 #default conf for Dolibarr default
 cp conf.php /home/_default/dolibarr/htdocs/conf/
-sed -i -e "s/base_hostname/$1/g" /home/_default/dolibarr/htdocs/conf/conf.php
 
 #write out current crontab
 crontab -l > mycron
