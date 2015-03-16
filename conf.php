@@ -5,7 +5,7 @@
 // Take a look at conf.php.example file for an example of conf.php file
 // and explanations for all possibles parameters.
 //
-$dolibarr_main_url_root='http://url_site.base_hostname.atm-consulting.fr/';
+$dolibarr_main_url_root='http://url_site.goerp.pro/';
 $dolibarr_main_document_root='/home/client/root_site/dolibarr/htdocs';
 $dolibarr_main_url_root_alt='/custom';
 $dolibarr_main_document_root_alt='/home/client/root_site/dolibarr/htdocs/custom';

@@ -1,7 +1,7 @@
 <VirtualHost *:80>
-	ServerAdmin support@atm-consulting.fr
+	ServerAdmin support@tqm-insight.com
 
-	ServerName dolibarr_defaut.srv5.atm-consulting.fr
+	ServerName dolibarr_defaut.goerp.pro
 
 	DocumentRoot /var/www/client/dolibarr_defaut/dolibarr/htdocs/
 	<Directory /var/www/client/dolibarr_defaut/dolibarr/htdocs>
