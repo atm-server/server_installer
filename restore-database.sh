@@ -13,3 +13,5 @@ rm database_`date +"%a-00"`.sql
 rm database_`date +"%a-00"`.sql.tar.bz2
 
 
+service mysql restart
+
