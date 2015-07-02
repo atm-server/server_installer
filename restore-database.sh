@@ -2,7 +2,7 @@
 exit
 #commenter exit pour vraiment mettre ce truc en place c'est dangerous !
 #export LANG=en_us_8859_1
-cd /var/www
+cd /home/client
 echo 'Extraction...'
 tar xzf database_`date +"%a-00"`.sql.tar.bz2
 echo 'Chargement...'
