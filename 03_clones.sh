@@ -16,10 +16,10 @@ chmod 777 /home/_default/dolibarr/documents
 mkdir /home/_default/dolibarr/htdocs/custom
 cd /home/_default/dolibarr/htdocs/custom
 
-git clone git@atmsrv1:doli-titre subtotal
-git clone git@atmsrv1:doli-docpreview docpreview
-git clone git@atmsrv1:doli-abricot abricot
+git clone git@github.com:ATM-Consulting/dolibarr_module_subtotal.git subtotal
+git clone git@github.com:ATM-Consulting/dolibarr_module_docpreview.git docpreview
+git clone git@github.com:ATM-Consulting/dolibarr_module_abricot.git abricot
 git clone git@atmsrv1:doli-report report
-git clone git@atmsrv1:doli-breadcrumb breadcrumb
+git clone git@github.com:ATM-Consulting/dolibarr_module_breadcrumb.git breadcrumb
 
 
