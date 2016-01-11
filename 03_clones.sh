@@ -18,6 +18,7 @@ cd /home/_default/dolibarr/htdocs/custom
 git clone git@github.com:ATM-Consulting/dolibarr_module_subtotal.git subtotal
 git clone git@github.com:ATM-Consulting/dolibarr_module_docpreview.git docpreview
 git clone git@github.com:ATM-Consulting/dolibarr_module_abricot.git abricot
+git clone git@github.com:ATM-Consulting/dolibarr_module_grapefruit.git grapefruit
 #git clone git@atmsrv1:doli-report report
 git clone git@github.com:ATM-Consulting/dolibarr_module_breadcrumb.git breadcrumb
 git clone git@github.com:ATM-Consulting/dolibarr_module_query.git query
