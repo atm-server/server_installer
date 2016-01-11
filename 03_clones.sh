@@ -23,5 +23,11 @@ git clone git@github.com:ATM-Consulting/dolibarr_module_breadcrumb.git breadcrum
 git clone git@github.com:ATM-Consulting/dolibarr_module_query.git query
 git clone git@github.com:ATM-Consulting/dolibarr_module_fullcalendar.git fullcalendar
 git clone git@github.com:ATM-Consulting/dolibarr_module_upbuttons.git upbuttons
-
+git clone git@github.com:ATM-Consulting/dolibarr_module_contactdefault.git
+git clone git@github.com:ATM-Consulting/dolibarr_module_history.git
+git clone git@github.com:ATM-Consulting/dolibarr_module_searcheverywhere.git
+git clone git@github.com:ATM-Consulting/dolibarr_module_related.git
+git clone git@github.com:ATM-Consulting/dolibarr_module_sendproductdoc.git
+git clone git@github.com:ATM-Consulting/dolibarr_module_propalehistory.git
+git clone git@github.com:ATM-Consulting/dolibarr_module_split.git
 
