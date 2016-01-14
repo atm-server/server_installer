@@ -1,5 +1,5 @@
-NameVirtualHost dolibarr_default.srv8.atm-consulting.fr:80
-<VirtualHost dolibarr_default:80>
+NameVirtualHost *:80
+<VirtualHost *:80>
 	ServerAdmin support@atm-consulting.fr
 
 	ServerName dolibarr_defaut.srv8.atm-consulting.fr
@@ -19,8 +19,8 @@ NameVirtualHost dolibarr_default.srv8.atm-consulting.fr:80
 	CustomLog ${APACHE_LOG_DIR}/dolibarr_defaut-access.log combined
 </VirtualHost>
 
-NameVirtualHost dolibarr_default.srv8.atm-consulting.fr:80
-<VirtualHost dolibarr_default.srv8.atm-consulting.fr:443>
+NameVirtualHost *:443
+<VirtualHost *:443>
 	ServerAdmin support@atm-consulting.fr
 
 	ServerName dolibarr_defaut.srv8.atm-consulting.fr
