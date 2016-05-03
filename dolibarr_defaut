@@ -3,6 +3,7 @@ NameVirtualHost *:80
 	ServerAdmin support@atm-consulting.fr
 
 	ServerName dolibarr_defaut.base_hostname.atm-consulting.fr
+	ServerAlias dolibarr_defaut.erp.atm-consulting.fr
 
 	DocumentRoot /var/www/client/dolibarr_defaut/dolibarr/htdocs/
 	<Directory /var/www/client/dolibarr_defaut/dolibarr/htdocs>
@@ -24,6 +25,7 @@ NameVirtualHost *:443
 	ServerAdmin support@atm-consulting.fr
 
 	ServerName dolibarr_defaut.base_hostname.atm-consulting.fr
+	ServerAlias dolibarr_defaut.erp.atm-consulting.fr
 
 	DocumentRoot /var/www/client/dolibarr_defaut/dolibarr/htdocs/
 	<Directory /var/www/client/dolibarr_defaut/dolibarr/htdocs>

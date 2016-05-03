@@ -7,6 +7,8 @@ if [ ! $# == 1 ]; then
 	exit 0;
 fi
 
+echo "$1" > /etc/hostname
+
 cd ~/server_installer
 
 cp auto_install.sh /var/www/

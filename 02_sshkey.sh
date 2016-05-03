@@ -5,7 +5,6 @@ fi
 
 echo "$1  atmsrv1" >> /etc/hosts
 
-
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 echo "Il faut ajouter cette clef sur les dépôts"
