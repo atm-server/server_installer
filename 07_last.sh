@@ -1,2 +1,2 @@
-htpasswd -c /home/client.htpasswd atm
+htpasswd -c /home/client/.htpasswd atm
 reboot
