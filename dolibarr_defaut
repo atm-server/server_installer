@@ -19,30 +19,3 @@ NameVirtualHost *:80
 
 	CustomLog ${APACHE_LOG_DIR}/dolibarr_defaut-access.log combined
 </VirtualHost>
-
-NameVirtualHost *:443
-<VirtualHost *:443>
-	ServerAdmin support@atm-consulting.fr
-
-	ServerName dolibarr_defaut.base_hostname.atm-consulting.fr
-	ServerAlias dolibarr_defaut.erp.atm-consulting.fr
-
-	DocumentRoot /var/www/client/dolibarr_defaut/dolibarr/htdocs/
-	<Directory /var/www/client/dolibarr_defaut/dolibarr/htdocs>
-		Options -Indexes FollowSymLinks MultiViews
-		AllowOverride All
-	</Directory>
-
-	SSLEngine On
-	SSLCertificateFile /home/ssl-cert/srv8.atm-consulting.fr.crt
-	SSLCertificateKeyFile /home/ssl-cert/srv8.atm-consulting.fr.key
-	ServerSignature On
-
-	ErrorLog ${APACHE_LOG_DIR}/dolibarr_defaut-error.log
-
-	# Possible values include: debug, info, notice, warn, error, crit,
-	# alert, emerg.
-	LogLevel warn
-
-	CustomLog ${APACHE_LOG_DIR}/dolibarr_defaut-access.log combined
-</VirtualHost>
