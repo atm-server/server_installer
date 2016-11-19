@@ -1,4 +1,4 @@
-mysqldump -u root -p defaut_dolibarr > /var/www/defaut_dolibarr.sql
+mysqldump -u root -p $1 > /var/www/defaut_dolibarr.sql
 cd /var/www/
 tar -zcvf ~/server_installer/d.tar defaut_dolibarr.sql
 cd ~/server_installer

@@ -60,4 +60,7 @@ touch documents/install.lock
 chmod 755 /var/www/client/$1/dolibarr/htdocs/conf/conf.php
 echo "Création conf.php et install.lock : OK"
 
+echo "Let's encrypt"
+/home/ssl-cert/certbot-auto
+
 exit 0
