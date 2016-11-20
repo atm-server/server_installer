@@ -18,6 +18,9 @@ cp pull_all.sh /home/_default/
 cp dolibarr_defaut /etc/apache2/sites-available
 cp .htaccess /home/_default/
 cp .htaccess /home/client/
+cp .bashrc ~/
+cp .bash_aliases ~/
+cp .gitconfig ~/
 
 #default conf for Dolibarr default
 cp conf.php /home/_default/dolibarr/htdocs/conf/

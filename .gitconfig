@@ -1,0 +1,12 @@
+[alias]
+        co = checkout
+        br = branch -v
+        st = status
+        rev = remote -v
+        si = submodule init
+        su = submodule update
+        conflicts = !git ls-files -u | cut -f 2 | sort -u
+        addm = !git-ls-files -m -z | xargs -0 git-add && git status
+        addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-a$
+[color]
+        ui = true
