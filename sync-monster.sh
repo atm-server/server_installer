@@ -3,3 +3,5 @@ value=`cat monster.txt`
 echo ";$value;"
 htpasswd -b /home/client/.htpasswd atm $value
 rm monster.txt
+
+/home/ssl-cert/certbot-auto renew --quiet --no-self-upgrade
