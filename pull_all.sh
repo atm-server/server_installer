@@ -7,6 +7,7 @@ ListeRep="$(find * -type d -prune)"   # liste des repertoires sans leurs sous-re
 for Rep in ${ListeRep}; do
 	cd ./${Rep}/
 	echo -e ${WHITE}---------- ${LIGHT_BLUE}Pulling ${WHITE}repo for${LIGHT_RED} ${Rep} ${WHITE}----------${NC}
-	git pull
+        new_branch="$(git name-rev  --name-only HEAD)"
+	git pull origin $new_branch
 	cd ..
 done
