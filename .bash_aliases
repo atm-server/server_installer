@@ -17,3 +17,5 @@ fi
 
 echo -e '\033[01;37m------ alias git utilisables ------\033[00m'
 git config --get-regexp alias
+
+alias lsgit='paste <(ls -ld --color=always *) <(for i in *; do if [ -d "$i"/.git ] ; then echo -e "\033[1;31m($(git --git-dir="$i"/.git symbolic-ref --short HEAD))\033[0m"; else echo; fi; done)'
