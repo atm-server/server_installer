@@ -43,8 +43,8 @@ echo "Copie base par défaut OK"
 # Création et initialisation du fichier apache2
 ###############################################
 cd /etc/apache2/sites-available
-cp dolibarr_defaut $1
-sed -i -e "s/dolibarr_defaut/$1/g" $1 
+cp dolibarr_defaut "$1.conf"
+sed -i -e "s/dolibarr_defaut/$1/g" "$1.conf"
 a2ensite $1
 apache2ctl restart
 echo "Création et initialisation du fichier apache2 : OK"
