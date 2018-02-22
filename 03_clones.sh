@@ -33,3 +33,4 @@ git clone git@github.com:ATM-Consulting/dolibarr_module_sendproductdoc.git sendp
 git clone git@github.com:ATM-Consulting/dolibarr_module_propalehistory.git propalehistory
 git clone git@github.com:ATM-Consulting/dolibarr_module_split.git split
 git clone git@github.com:ATM-Consulting/dolibarr_module_supportatm.git supportatm
+git clone git@github.com:ATM-Consulting/dolibarr_module_listincsv.git listincsv
