@@ -10,6 +10,7 @@ for Rep in ${ListeRep}; do
 	then
 		cd ./${Rep}/dolibarr/htdocs/custom/${MODULE_NAME}
 		echo "$Rep"
+		#git remote set-url origin git@github.com:ATM-Consulting/dolibarr_module_$MODULE_NAME.git
 		git log -1 --format=%cd --date=short
 		git pull origin master
 		echo "-----------"
