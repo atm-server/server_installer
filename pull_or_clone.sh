@@ -22,6 +22,7 @@ for Rep in ${ListeRep}; do
 		else
 			echo "IMPOSSIBLE DE CLONER ${MODULE_NAME} DANS LE DOSSIER ${Rep}/dolibarr/htdocs/custom CAR NON EXISTANT"
 			#mkdir -p ./${Rep}/dolibarr/htdocs/custom ## si nécessité de créer le répertoir custom
+			#read -p "Appuyer la touche <Entrée> pour continuer..."
 		fi
 	fi
 
