@@ -15,7 +15,7 @@ cp auto_install.sh /var/www/
 cp dump-all.sh /root/
 cp pull_all.sh /home/_default/dolibarr/htdocs/custom/
 cp pull_all.sh /home/_default/
-cp dolibarr_defaut /etc/apache2/sites-available
+cp dolibarr_defaut.conf /etc/apache2/sites-available/
 cp .htaccess /home/_default/
 cp .htaccess /home/client/
 cp .bashrc ~/
@@ -25,7 +25,7 @@ cp .gitconfig ~/
 #default conf for Dolibarr default
 cp conf.php /home/_default/dolibarr/htdocs/conf/
 sed -i -e "s/base_port/$2/g" /home/_default/dolibarr/htdocs/conf/conf.php
-sed -i -e "s/base_hostname/$1/g" /etc/apache2/sites-available/dolibarr_defaut
+sed -i -e "s/base_hostname/$1/g" /etc/apache2/sites-available/dolibarr_defaut.conf
 
 cp sync-monster.sh ~/
 sed -i -e "s/intranet_position/$3/g" ~/sync-monster.sh
