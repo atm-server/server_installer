@@ -5,6 +5,6 @@ a2enmod ssl
 echo "mysql -u root -p"
 echo "Enter Password : (vous tapez entrer)"
  
-echo "MariaDB [(none)]> UPDATE mysql.user SET plugin = NULL WHERE user = 'root' AND plugin = 'unix_socket';"
-echo "MariaDB [(none)]> FLUSH PRIVILEGES;"
-echo "MariaDB [(none)]> SET PASSWORD FOR root@'localhost'=PASSWORD('mon_nouveau_mot-de_passe');"
+echo "UPDATE mysql.user SET plugin = NULL WHERE user = 'root' AND plugin = 'unix_socket';"
+echo "FLUSH PRIVILEGES;"
+echo "SET PASSWORD FOR root@'localhost'=PASSWORD('mon_nouveau_mot-de_passe');"
