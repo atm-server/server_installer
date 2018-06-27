@@ -53,8 +53,10 @@ do
                 echo -e "${WHITE}git branch $lastversionstable.0${NC}"
                 git branch $lastversionstable.0
 
-                echo -e "${WHITE}git checkout $remote $lastversionstable.0${NC}"
-                git checkout $remote $lastversionstable.0
+                #echo -e "${WHITE}git checkout $remote $lastversionstable.0${NC}"
+                #git checkout $remote $lastversionstable.0
+				echo -e "${WHITE}git checkout $lastversionstable.0${NC}"
+                git checkout $lastversionstable.0
 
                 echo -e "${WHITE}git pull $remote $lastversionstable.0${NC}"
                 git pull $remote $lastversionstable.0
