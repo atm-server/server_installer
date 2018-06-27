@@ -14,12 +14,19 @@ NC='\033[0m'
 REPOSITORIES=`pwd`
 remote=origin
 
-
+## Liste des modules à exclure des checkout
+declare -A TModuleExclude=(
+	[abricot]=1 [agefodd]=1
+)
 
 for REPO in `ls "$REPOSITORIES/"`
 do
     lastversionstable=0
-
+    
+    if [[ -n "${TModuleExclude[$REPO]}" ]]; then
+		continue
+	fi
+    
     if [ -d "$REPOSITORIES/$REPO" ]
     then
         echo -e "${BLUE}Updating folder ${WHITE}$REPOSITORIES/$REPO${RED} at `date`${NC}"
