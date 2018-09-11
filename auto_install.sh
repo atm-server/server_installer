@@ -57,7 +57,7 @@ htpasswd /var/www/client/.htpasswd $1
 ################################
 cd /var/www/client/$1/dolibarr
 touch documents/install.lock
-chmod 755 /var/www/client/$1/dolibarr/htdocs/conf/conf.php
+chmod 644 /var/www/client/$1/dolibarr/htdocs/conf/conf.php
 echo "Création conf.php et install.lock : OK"
 
 echo "Let's encrypt"
