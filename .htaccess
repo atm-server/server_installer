@@ -3,6 +3,13 @@
   deny from all
 </Files>
 
+## Pour docedit
+#<FilesMatch "^viewimage\.php$">
+#        Order Allow,Deny
+#        Allow from 1.2.3.4 # ip du serveur à renseigner
+#        #Satisfy any
+#</FilesMatch>
+
 Options All -Indexes
 
 AuthType Basic
