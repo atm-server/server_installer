@@ -4,7 +4,7 @@ mkdir /home/client
 touch /home/client/.htpasswd
 
 cd /home/_default
-git clone git@github.com:ATM-Consulting/dolibarr.git --branch 6.0 
+git clone git@github.com:ATM-Consulting/dolibarr.git --branch 8.0 
 
 cd /home/_default/dolibarr/ 
 git pull
