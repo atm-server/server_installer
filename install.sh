@@ -95,30 +95,6 @@ fi
 
 
 printf "\n${LPURPLE}"
-printf "###########################\n"
-printf "## Add ssh alias to atmsrv1\n"
-printf "###########################\n"
-printf "${NC}"
-read -p "Public ip of atmsrv1 (blank don't add entry in ~/.ssh/config): " IP_SRV1
-if [ -n "$IP_SRV1" ]; then
-    if [ -f ~/.ssh/config ]; then
-        echo "" >> ~/.ssh/config
-    else
-        touch ~/.ssh/config
-    fi
-
-    echo "Host atmsrv1" >> ~/.ssh/config
-    echo "    Hostname $IP_SRV1" >> ~/.ssh/config
-    echo "    Port 22" >> ~/.ssh/config
-    echo "    User root" >> ~/.ssh/config
-
-    printf "${WHITE}Host atmsrv1 added with $IP_SRV1 address in ~/.ssh/config${NC}\n"
-fi
-
-# #######################################################################
-
-
-printf "\n${LPURPLE}"
 printf "##########\n"
 printf "## Generation of ssh key\n"
 printf "##########\n"
@@ -135,6 +111,30 @@ printf "\n${LBLUE}"
 cat ~/.ssh/id_rsa.pub
 printf "${NC}\n"
 read -p "Press key to continue" NOTHING
+
+# #######################################################################
+
+
+printf "\n${LPURPLE}"
+printf "###########################\n"
+printf "## Add ssh alias to atmsrv1\n"
+printf "###########################\n":
+printf "${NC}"
+read -p "Public ip of atmsrv1 (blank don't add entry in ~/.ssh/config): " IP_SRV1
+if [ -n "$IP_SRV1" ]; then
+    if [ -f ~/.ssh/config ]; then
+        echo "" >> ~/.ssh/config
+    else
+        touch ~/.ssh/config
+    fi
+
+    echo "Host atmsrv1" >> ~/.ssh/config
+    echo "    Hostname $IP_SRV1" >> ~/.ssh/config
+    echo "    Port 22" >> ~/.ssh/config
+    echo "    User root" >> ~/.ssh/config
+
+    printf "${WHITE}Host atmsrv1 added with $IP_SRV1 address in ~/.ssh/config${NC}\n"
+fi
 
 # #######################################################################
 
