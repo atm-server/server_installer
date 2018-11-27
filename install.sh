@@ -16,20 +16,20 @@ printf "# Deploying bash files\n"
 printf "######################\n"
 printf "${NC}"
 
-read -p "Deploy .bashrc file in ~ ? (y/N) " DEP_BASHRC
+read -p "Deploy .bashrc file in ~ ? (y/N): " DEP_BASHRC
 if [ "$DEP_BASHRC" = "y" ]; then
     printf "${WHITE}cp .bashrc ~/${NC}\n"
     cp .bashrc ~/
     source ~/.bashrc                # reload file
 fi
 
-read -p "Deploy .bash_aliases file in ~ ? (y/N) " DEP_BASH_ALIASES
+read -p "Deploy .bash_aliases file in ~ ? (y/N): " DEP_BASH_ALIASES
 if [ "$DEP_BASH_ALIASES" = "y" ]; then
     printf "${WHITE}cp .bash_aliases ~/${NC}\n"
     cp .bash_aliases ~/
 fi
 
-read -p "Deploy .gitconfig file in ~ ? (y/N) " DEP_GITCONFIG
+read -p "Deploy .gitconfig file in ~ ? (y/N): " DEP_GITCONFIG
 if [ "$DEP_GITCONFIG" = "y" ]; then
     printf "${WHITE}cp .gitconfig ~/${NC}\n"
     cp .gitconfig ~/
@@ -201,7 +201,7 @@ if [ ! -f ~/sync-monster.sh ]; then
 
     echo ""
 
-    read -p "Give the intranet url without https:// (only foo.fr)" intranet_position
+    read -p "Give the intranet url without https:// (only foo.fr): " intranet_position
     printf "${WHITE}sed -i -e \"s/intranet_position/${intranet_position}/g\" ~/sync-monster.sh${NC}\n"
     sed -i -e "s/intranet_position/${intranet_position}/g" ~/sync-monster.sh
 else
@@ -221,7 +221,7 @@ printf "${NC}"
 
 while :
 do
-    read -p "y/n" INSTALL_CERTBOT
+    read -p "(y/n): " INSTALL_CERTBOT
 
     if [ "$INSTALL_CERTBOT" = "n" ]; then
         break;
@@ -269,7 +269,7 @@ cat mycron_tmp                                      # show new entries
 
 while :
 do
-    read -p "y/n" ADD_CRON_ENTRIES
+    read -p "(y/n): " ADD_CRON_ENTRIES
 
     if [ "$ADD_CRON_ENTRIES" = "n" ]; then
         break
